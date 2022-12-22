@@ -1,5 +1,4 @@
-# Ejemplos de como excluir e
-n git
+# Ejemplos de como excluir en git
 
 # excluir pdf
 *.pdf
@@ -37,4 +36,4 @@ nbproject/
 .DS_Store
  
 # excluir archivos de configuracion de windows
-Thumbs.db 
+Thumbs.db
