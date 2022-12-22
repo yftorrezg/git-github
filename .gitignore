@@ -37,6 +37,4 @@ nbproject/
 .DS_Store
  
 # excluir archivos de configuracion de windows
-Thumbs.db
- 
-
+Thumbs.db 
