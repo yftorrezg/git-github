@@ -1,6 +1,7 @@
 # Ejemplos de como excluir en git
+README.JPEG
+# excluir Comandos GIT
 
-# excluir pdf
 *.pdf
 
 # excluir imagenes
