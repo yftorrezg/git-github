@@ -82,7 +82,7 @@ Se recomienda hacer commits específicos, esto permitirá hacer **checkouts** m�
 
 |                |Comando                          |
 |----------------|-------------------------------|
-|Modificar mensaje de commit (sin haber hecho push)|`git commit --amend -m "Mensaje correcto"`|
+|Modificar mensaje de commit (sin/con haber hecho push)|`git commit --amend -m "Mensaje correcto"`|
 
 ## Revertir cambios
 
