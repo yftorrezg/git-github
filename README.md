@@ -41,6 +41,7 @@ Al realizar estas configuraciones ya no tendríamos que configurar los usuarios 
 
 |                |Comando                          |
 |----------------|-------------------------------|
+|Quitar del stage todos los archivos|`git reset .`|
 |Quitar del stage archivos con cierta extensión|`git reset *.xml`|
 |Quitar del stage archivo en específico|`git reset HEAD "archivo"`|
 |Quitar del stage archivo que tenía commit|`git reset --soft "HEAD^ o el id obtenido con git lg"`|
