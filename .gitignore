@@ -1,7 +1,0 @@
-# Hola, tengo un problema con el gitignore, tengo un proyecto en laravel y quiero que no se suban los archivos pdf y las imagenes, pero no me funciona, este es mi gitignore:
-
-# excluir pdf
-*.pdf
-# excluir imagenes
-*.jpg
-
