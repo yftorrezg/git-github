@@ -37,7 +37,7 @@ Al realizar estas configuraciones ya no tendríamos que configurar los usuarios 
 |Agregar todos los archivos|`git add --all`|
 |Agregar todos los archivos en una carpeta con cierta extensión|`git add pdfs/*.pdf`|
 
-## Volver al ultimo commit si tocaste algo guardas cerrraste y no sirve el cntrl + z
+## Volver al ultimo commit si tocaste algo guardas cerrraste y no sirve el cntrl + z 😀🤬👿
 
 |                |Comando                          |
 |----------------|-------------------------------|
