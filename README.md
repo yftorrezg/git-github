@@ -42,7 +42,7 @@ Al realizar estas configuraciones ya no tendríamos que configurar los usuarios 
 |                |Comando                          |
 |----------------|-------------------------------|
 |Volver al ultimo commit|`git checkout -- .`|
-|Volver al ultimo commit|`git reset --hard HEAD`|
+|Volver al ultimo commit duramente eliminando todo hasta ese commit|`git reset --hard HEAD`|
 
 ## Revertir commit
 
@@ -51,7 +51,7 @@ Al realizar estas configuraciones ya no tendríamos que configurar los usuarios 
 |Quitar del stage todos los archivos|`git reset .`|
 |Quitar del stage archivos con cierta extensión|`git reset *.xml`|
 |Quitar del stage archivo en específico|`git reset HEAD "archivo"`|
-|Quitar del stage archivo que tenía commit|`git reset --soft "HEAD^ o el id obtenido con git lg"`|
+|Quitar del STAGE archivo que tenía commit sin eliminar nada|`git reset --soft "HEAD^ o el id obtenido con git lg"`|
 |Regresar a un commit sin quitar los cambios que tienen los archivos|`git reset --mixed "id"`|
 |Regresar a un commit y pone los archivos como estaban en ese entonces|`git reset --hard "id"`|
 
@@ -60,7 +60,7 @@ Al realizar estas configuraciones ya no tendríamos que configurar los usuarios 
 |                |Comando                          |
 |----------------|-------------------------------|
 |Mostrar todas las acciones que se han hecho en el repositorio (commits, resets, etc)|`git reflog`|
-|Recuperar los cambios luego de haber hecho un reset|`git reset --hard "id del commit al que queremos volver"`|
+|Recuperar los cambios luego de haber hecho un **reset (..hard)**, viendo el id del **git reflof**|`git reset --hard "id del commit al que queremos volver"`|
 
 ## Revisar cambios que hemos hecho
 
@@ -108,7 +108,7 @@ Se recomienda hacer commits específicos, esto permitirá hacer **checkouts** m�
 |Renombrar archivos|`git mv nombre-actual-archivo.txt nombre-que-tendra.txt`|
 |Eliminar archivos|`git rm nombre-archivo.txt`|
 
-Después de realizar estos comandos se deben hacer los commits para guardar los cambios.
+Después de realizar estos comandos se deben hacer los commits para guardar los cambios, por que ya estan en el STAGE 😎.
 
 ### - Desde el editor
 
