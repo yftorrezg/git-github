@@ -177,7 +177,7 @@ Una rama es una línea de tiempo de commits, estas nos ayudarán cuando queramos
 |Ver ramas remotas|`git branch -r`|
 |Ver ramas remotas y locales|`git branch -a`|
 |Ver ramas remotas y locales con commits|`git branch -av`|
-|Crear rama remota|`git push origin nombre-rama`|
+|Crear subir rama remota a github|`git push origin nombre-rama`|
 |Eliminar rama remota|`git push origin :nombre-rama`|
 
 ## Ramas remotas con pull
