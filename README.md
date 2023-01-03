@@ -5,10 +5,13 @@
 |                |Comando                          |
 |----------------|-------------------------------|
 |Verificar versión|`git --version`|
-|Saber más sobre un comando específico|`git help "comando"`            |
+|Saber sobre un comando|`git help "comando"`            |
 |Nombre global|`git config --global user.name "Nombre"`|
 |Email global|`git config --global user.email "nuestro@email.com"`|
+|Ver configuración global y alias|`git config --global -l`|
 |Ver configuración global|`git config --global -e`|
+|Ver configuración local y alias|`git config -l`|
+|Ver configuración local|`git config -e`|
 
 Al realizar estas configuraciones ya no tendríamos que configurar los usuarios de git cada vez que realicemos **commits** o hagamos **push**.
 
@@ -23,26 +26,26 @@ Al realizar estas configuraciones ya no tendríamos que configurar los usuarios 
 |                |Comando                          |
 |----------------|-------------------------------|
 |Verificar cambios que se han realizado|`git status`|
-|Ver directamente los archivos que tuvieron cambios|`git status -s`|
-|Ver directamente los archivos con cambios junto con la rama actual|`git status -s -b`|
+|Ver los archivos que tuvieron cambios|`git status -s`|
+|Ver archivos con cambios junto con la rama actual|`git status -s -b`|
 
 ## Agregar o quitar archivos antes del commit
 
 |                |Comando                          |
 |----------------|-------------------------------|
-|Agregar todos los archivos|`git add .`|
-|Agregar todos los archivos que se modificaron|`git add -A`|
-|Agregar todos los archivos con cierta extensión en el directorio actual|`git add *.png`|
-|Agregar todos los archivos con cierta extensión de **TODO** el proyecto|`git add "*.png"`|
+|todo|`git add .`|
+|todo lo q se modificó|`git add -A`|
+|archivos con cierta extensión en el directorio actual|`git add *.png`|
+|archivos con cierta extensión de **TODO** el proyecto|`git add "*.png"`|
 |Agregar todos los archivos|`git add --al`|
-|Agregar todos los archivos en una carpeta con cierta extensión|`git add pdfs/*.pdf`|
+|archivos en una carpeta con cierta extensión|`git add pdfs/*.pdf`|
 
 ## Volver al ultimo commit si tocaste algo guardas cerrraste y no sirve el cntrl + z 😀🤬👿
 
 |                |Comando                          |
 |----------------|-------------------------------|
 |Volver al ultimo commit|`git checkout -- .`|
-|Volver al ultimo commit duramente eliminando todo hasta ese commit|`git reset --hard HEAD`|
+|Volver al ultimo commit duramente eliminando todo hasta ese commit|`git reset --hard HEAD😍`|
 
 ## Revertir commit
 
@@ -131,7 +134,7 @@ Ya en este punto habrá detectado que el archivo fue eliminado y podremos hacer 
 
 ## Ignorar archivos
 
-Para ignorar el archivo simplemente creamos un archivo con nombre **.gitignore** y escribimos el nombre del archivo/carpeta que no queremos agregar a nuestro repositorio (para todos los archivos con una extensión en particular escribimos *.extensión y para carpetas node_modules/).
+Creamos un archivo con nombre **.gitignore** y escribimos el nombre del archivo/carpeta que no queremos agregar a nuestro repositorio (para todos los archivos con una extensión en particular escribimos *.extensión y para carpetas node_modules/).
 
 ## Crear alias
 
@@ -139,7 +142,6 @@ Para ignorar el archivo simplemente creamos un archivo con nombre **.gitignore**
 |----------------|-------------------------------|-------------------------------|
 |Crear alias|`git config --global alias."alias" "codigo"`|`git config --global alias.lg "log --oneline --decorate --all --graph"`|
 |Otro ejemplo|`git config --global alias."alias" "codigo"`|`git config --global alias.s "status -s -b"`|
-|Ver alias que hemos creado|`git config --global -e`|Sin ejemplo|
 |Ver listado de datos globales y alias|`git config --global -l`|Sin ejemplo|
 
 Estos alias se crean con el fin de simplificar las instrucciones que le damos a Git.
@@ -160,9 +162,41 @@ Una rama es una línea de tiempo de commits, estas nos ayudarán cuando queramos
 |Crear rama|`git branch nombre-rama`|
 |Crear rama y moverse a ella en un comando|`git checkout -b nombre-rama`|
 |Ver ramas (la verde es la rama en la que estamos actualmente)|`git branch`|
+|Ver ramas con commits|`git branch -v`|
+|Ver ramas con ramas remotas|`git branch -a`|
+|Ver ramas con commits y ramas remotas|`git branch -av`|
 |Cambiar de rama|`git checkout nombre-rama`|
 |Ver diferencias entre ramas|`git diff rama-1 master-o-rama-2`|
 |Eliminar rama (hacer luego de hacer merge)|`git branch -d nombre-rama`|
+|Eliminar rama |`git branch -D nombre-rama`|
+
+## Ramas remotas
+
+|                |Comando                          |
+|----------------|-------------------------------|
+|Ver ramas remotas|`git branch -r`|
+|Ver ramas remotas y locales|`git branch -a`|
+|Ver ramas remotas y locales con commits|`git branch -av`|
+|Crear rama remota|`git push origin nombre-rama`|
+|Eliminar rama remota|`git push origin :nombre-rama`|
+
+## Ramas remotas con pull
+
+|                |Comando                          |
+|----------------|-------------------------------|
+|Ver ramas remotas y locales y HEAD|`git branch -avvv`|
+|Crear rama remota😍|`git pull origin nombre-rama`|
+|Eliminar rama remota|`git push origin :nombre-rama`|
+
+## Ramas remotas con fetch
+
+|                |Comando                          |
+|----------------|-------------------------------|
+|Ver ramas remotas y locales|`git branch -a`|
+|Ver ramas remotas|`git branch -r`|
+|Crear rama remota|`git fetch origin nombre-rama`|
+|Eliminar rama remota|`git push origin :nombre-rama`|
+|Eliminar rama eliminado en github remotamente|`git remote prune origin`|
 
 ## Merge Fast-Forward
 
@@ -188,14 +222,15 @@ Este tipo de merge sucede cuando realizamos cambios en ambas ramas y estos puede
 |----------------|-------------------------------|
 |Unir ramas|`git merge rama-a-unir`|
 
-En este punto tendremos que hacer la modificación manualmente, para ello quitamos las etiquetas (<<<<<<<<<<<HEAD, ============, >>>>>>>>>>>>>>) y hacemos el commit.
+En este punto tendremos que hacer la modificación manualmente, para ello quitamos las etiquetas
+    (<<<<<<<<<<<HEAD, ============, 
+    >>>>>>>>>>>>>>) 
+y hacemos el commit.
 
-Desde Atom hay una interfaz amigable para organizar más fácilmente, nos permite escoger cuáles cambios queremos dejar, si los de master o la rama-2.
-
-# Tags
+## Tags
 
 Son una referencia a un commit específico, se usan para guardar releases, usualmente se guardan usando número de versiones.
-
+Se pueden descargar de GitHub.
 |                |Comando                          |
 |----------------|-------------------------------|
 |Crear tags|`git tag nombre-o-versión-tag`|
@@ -204,3 +239,13 @@ Son una referencia a un commit específico, se usan para guardar releases, usual
 |Ver tags (sólo muestra la versión o nombre que le dimos)|`git tag`|
 |Borrar tags|`git tag -d nombreTag`|
 |Ver mensaje de tags|`git show v1.0.0`|
+|Subir tags a repositorio remoto|`git push origin --tags`|
+|Subir tags a repositorio remoto|`git push --tags`|
+
+## Traer cambios de repositorio remoto
+
+|                |Comando                          |
+|----------------|-------------------------------|
+|Traer cambios de repositorio remoto|`git pull`|
+|Traer cambios de repositorio remoto con todas las ramas|`git pull --all`|
+|Traer cambios de repositorio remoto con todas las ramas y tags|`git pull --all --tags`|
