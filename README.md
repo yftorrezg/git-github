@@ -160,7 +160,7 @@ Una rama es una línea de tiempo de commits, estas nos ayudarán cuando queramos
 |                |Comando                          |
 |----------------|-------------------------------|
 |Crear rama|`git branch nombre-rama`|
-|Crear rama y moverse a ella en un comando|`git checkout -b nombre-rama`|
+|Crear rama y moverse a ella en un comando 😎|`git checkout -b nombre-rama`|
 |Ver ramas (la verde es la rama en la que estamos actualmente)|`git branch`|
 |Ver ramas con commits|`git branch -v`|
 |Ver ramas con ramas remotas|`git branch -a`|
@@ -168,6 +168,7 @@ Una rama es una línea de tiempo de commits, estas nos ayudarán cuando queramos
 |Cambiar de rama|`git checkout nombre-rama`|
 |Ver diferencias entre ramas|`git diff rama-1 master-o-rama-2`|
 |Eliminar rama (hacer luego de hacer merge)|`git branch -d nombre-rama`|
+|Eliminar rama forzosamente|`git branch -d nombre_rama -f`|
 |Eliminar rama |`git branch -D nombre-rama`|
 
 ## Ramas remotas
@@ -238,7 +239,8 @@ Se pueden descargar de GitHub.
 |Crear tag en commit anterior|`git tag -a v0.1.0 hash-commit -m "mensaje"`|
 |Ver tags (sólo muestra la versión o nombre que le dimos)|`git tag`|
 |Borrar tags|`git tag -d nombreTag`|
-|Ver mensaje de tags|`git show v1.0.0`|
+|Ver + detalle del tag|`git show nombre_tag`|
+|Ver mensaje y demas de tags|`git show v1.0.0`|
 |Subir tags a repositorio remoto|`git push origin --tags`|
 |Subir tags a repositorio remoto|`git push --tags`|
 
@@ -249,3 +251,29 @@ Se pueden descargar de GitHub.
 |Traer cambios de repositorio remoto|`git pull`|
 |Traer cambios de repositorio remoto con todas las ramas|`git pull --all`|
 |Traer cambios de repositorio remoto con todas las ramas y tags|`git pull --all --tags`|
+
+## Git stahs
+
+Git stash: guarda los cambios que no hemos hecho commit, es decir, los cambios que no están en el área de preparación. Espacio temporal.
+|                |Comando                          |
+|----------------|-------------------------------|
+|Guardar cambios|`git stash`|
+|Ver cambios guardados|`git stash list`|
+|Recupera cambio y elimina|`git stash pop`|
+|borrar todos los stahs|`git stash clear`|
+|Recuperar cambios  de un stash|`git stash apply stash@{2}`|
+|borrar un stahs|`git stash drop stash@{2}`|
+|ver a detalle un stahs|`git stash show stash@{2}`|
+|Guardar cambios con nombre|`git stash save "mensaje"`|
+
+## rebase
+
+rebase: actualiza nuestra rama del master
+
+|                |Comando                          |
+|----------------|-------------------------------|
+|Rebase|`git rebase nombre-rama`|
+|Rebase con squash|`git rebase -i nombre-rama`|
+luego del rebase se realiza el: `git merge rama y luego borrar la rama: git branch -d nombre_rama`
+
+`git rebase -i HEAD~`
