@@ -104,7 +104,7 @@ Se recomienda hacer commits específicos, esto permitirá hacer **checkouts** m�
 
 ## Configuración de archivos desde Git
 
-### - Desde la terminal
+### Desde la terminal
 
 |                |Comando                          |
 |----------------|-------------------------------|
@@ -113,7 +113,7 @@ Se recomienda hacer commits específicos, esto permitirá hacer **checkouts** m�
 
 Después de realizar estos comandos se deben hacer los commits para guardar los cambios, por que ya estan en el STAGE 😎.
 
-### - Desde el editor
+### Desde el editor
 
 Se renombra desde el editor de preferencia, al hacer `git status` Git dirá que eliminamos un archivo y hemos creado otro, para corregir esto y que Git sepa que es una actualización en el nombre debemos hacer lo siguiente:
 
@@ -185,6 +185,7 @@ Una rama es una línea de tiempo de commits, estas nos ayudarán cuando queramos
 
 |                |Comando                          |
 |----------------|-------------------------------|
+|Ver acceso remoto |`git remote -v`|
 |Ver ramas remotas y locales y HEAD|`git branch -avvv`|
 |Crear rama remota😍|`git pull origin nombre-rama`|
 |Eliminar rama remota|`git push origin :nombre-rama`|
@@ -228,7 +229,7 @@ En este punto tendremos que hacer la modificación manualmente, para ello quitam
     >>>>>>>>>>>>>>) 
 y hacemos el commit.
 
-## Tags
+# Tags
 
 Son una referencia a un commit específico, se usan para guardar releases, usualmente se guardan usando número de versiones.
 Se pueden descargar de GitHub.
@@ -273,7 +274,19 @@ rebase: actualiza nuestra rama del master
 |                |Comando                          |
 |----------------|-------------------------------|
 |Rebase|`git rebase nombre-rama`|
-|Rebase con squash|`git rebase -i nombre-rama`|
 luego del rebase se realiza el: `git merge rama y luego borrar la rama: git branch -d nombre_rama`
+|                |Comando                          |
+|----------------|-------------------------------|
+|Rebase con squash: unir commit|`git rebase -i HEAD~4`|
 
-`git rebase -i HEAD~`
+## Comands
+
+primero solo se edita la abreviatura luego: a+ esc + :  wq! enter
+luego se edita en el otro panel 😀
+
+* r, reword: edita el commit, el mensaje.
+* s, squash: unir commit
+* f, fixup: unir commit. 
+* d, drop: eliminar commit
+* p, pick: conservar commit
+* e, edit: para dividir commits. `git rebase --continue`
