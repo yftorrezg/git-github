@@ -6,12 +6,13 @@ README.JPEG
 
 # excluir imagenes
 *.jpg
+*.log
 
 # excluir una carpeta
-public/uploads/
+dist/
 
 # excluir un archivo
-public/uploads/imagen.jpg
+node_modules/
 
 # excluir un archivo con extension
 public/uploads/*.jpg
