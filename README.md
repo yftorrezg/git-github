@@ -228,6 +228,27 @@ node_modules/
 |Alias fer py 😎|git branch|`alias gb="git branch"`|
 |Alias fer 😎|venv|`alias venv="source venv/Scripts/activate"`|
 
+## Alias del fer⚽😎
+
+```sh
+    alias g='git'
+    alias ga='git add --all'
+    alias gb='git branch'
+    alias gc='git commit'
+    alias gcm='git commit -m'
+    alias gco='git checkout'
+    alias gs='git status -sb'
+  
+    alias ll='ls -l'
+    alias ls='ls -F --color=auto --show-control-chars'
+```
+
+Como configurar eso de manera global ?
+
+1. Crear archivo:  **.bashrc**
+2. Agregar alias
+3. Guardar archivo
+
 ## Errores
 
 |                |Comando                          |
