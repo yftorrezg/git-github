@@ -1,41 +1,4 @@
-# Ejemplos de como excluir en git
-README.JPEG
-# excluir Comandos GIT
-
-*.pdf
-
-# excluir imagenes
-*.jpg
-*.log
-
-# excluir una carpeta
-dist/
-
-# excluir un archivo
-node_modules/
-
-# excluir un archivo con extension
-public/uploads/*.jpg
-
-# excluir archivos de configuracion
-.env
-.env.example
- 
-# excluir archivos de configuracion de phpstorm
-.idea/
- 
-# excluir archivos de configuracion de netbeans
-nbproject/
- 
-# excluir archivos de configuracion de sublime
-*.sublime-project
-*.sublime-workspace
- 
-# excluir archivos de configuracion de vscode
-.vscode/
- 
-# excluir archivos de configuracion de mac
-.DS_Store
- 
-# excluir archivos de configuracion de windows
-Thumbs.db
+pdf/
+esp.html
+novias.html
+README.png

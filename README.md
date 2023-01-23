@@ -238,6 +238,9 @@ node_modules/
     alias gcm='git commit -m'
     alias gco='git checkout'
     alias gs='git status -sb'
+    alias gp='git push'
+    alias gpl='git pull'
+    
   
     alias ll='ls -l'
     alias ls='ls -F --color=auto --show-control-chars'
