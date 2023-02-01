@@ -209,7 +209,7 @@ Ya en este punto habrá detectado que el archivo fue eliminado y podremos hacer 
 
 ## Ignorar archivos
 
-Creamos archivo:  **.gitignore** 
+Creamos archivo:  **.gitignore**
 
 ```sh
 # Ignorar archivos con extensión .log, carpetas, pdf, imagenes, node, etc  :  *.log *.jpg *.jpeg *.gif *.mp4 *.mp3 *.zip *.rar *.7z *.tar
