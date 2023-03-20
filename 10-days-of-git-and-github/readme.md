@@ -4,7 +4,7 @@
 
 You should install [git](https://git-scm.com/).
 <!-- https://github.com/yftorrezg/10-days-of-git-and-github/tree/fer -->
-Mi repo en github [git_fer](https://github.com/yftorrezg/10-days-of-git-and-github/tree/fer)
+Mi repo en github [git_fer](https://github.com/yftorrezg/git-github/tree/main/10-days-of-git-and-github)
 Mi repo mio en github [git-github_fer](https://github.com/yftorrezg/git-github)
 
 ```sh
@@ -125,7 +125,7 @@ After you write Y then click enter.
 
 ### Opening file to read
 
-We can use the _cat_ command just only to read the file.
+We can use the **_cat_** command just only to read the file.
 
 ```sh
 /Desktop/10-days-of-code$ cat day-1.txt
