@@ -13,47 +13,58 @@
 |Ver configuración global y alias|`git config --global -l`|
 |Ver cg|`git config --global -e`|
 
-Al realizar estas configuraciones ya no tendríamos que configurar los usuarios de git cada vez que realicemos **commits** o hagamos **push**.
+ultima: se puede entrar normal con ``O``😥averiguar como  salir de la configuración: `:wq!`
+Con esto ya no configurararemos usuario/email cada que hagamos **commits** o **push**.
 
-### Comandos de la terminal
+### **Comandos terminal**
 
-- Entrar carpeta:           `cd 'arrastrar carpeta a la terminal'`
-- Entrar carpeta:           `cd "nombre de la carpeta"`
-- Salir de carpeta:         ``cd ..``
-- Ver contenido:         ``ls``
-- Ver contenido oculto, borrar .git para proyecto limpio: ``ls -al``
+- Entrar carpeta:   `cd 'arrastrar carpeta a tm'`
+- Entrar.............:           `cd "name folder"`
+- Volver.............:           ``cd ..``
+- Ver contenido.:    ``ls``
+- Ver '' oculto.....: ``ls -al``
 
 #### Crear archivos
 
 - Archivo vacio: ``touch "nombre_archivo"``
 - Con contenido: ``echo "contenido_archivo" > "nombre_archivo"``
 - Con contenido: ``echo "contenido_archivo" >> "nombre_archivo"``
+- Ejemplo..........:`echo "que guapo el fer" > fer.md`
 
 #### Crear carpetas
 
 - Carpeta: ``mkdir "nombre_carpeta"``
+- Carpeta con archivos: ``mkdir -p "nombre_carpeta/nombre_carpeta/nombre_archivo"``
+- Ejemplo..........: ``mkdir -p "fer/fer/fer.md"``
 
 #### Copiar archivos
 
 |                |Comando                          |
 |----------------|-------------------------------|
 |Copiar archivo| `cp "nombre_archivo" "nombre_archivo"`|
-|Ejemplo|`echo "que guapo el fer" > fer.md`|
+|ejemplo| `cp -r "fer/fer.md" "fer/fer2.md"`|
 |Copiar carpeta| `cp -r "nombre_carpeta" "nombre_carpeta"`|
+|ejemplo| `cp -r "fer/fer" "fer/fer2"`|
 
 #### Mover archivos
 
 |                |Comando                          |
 |----------------|-------------------------------|
 |Mover archivo| `mv "nombre_archivo" "nombre_archivo"`|
+|ejemplos| `mv -r "fer/fer.md" "fer/fer2.md"`|
 |Mover carpeta| `mv -r "nombre_carpeta" "nombre_carpeta"`|
+|ejemplos| `mv -r "fer/fer" "fer/fer2"`|
+|ejemplos| `mv valeria/ valeria2/`|
+Se usa para renombrar archivos y carpetas.
 
 #### Borrar archivos
 
 |                |Comando                          |
 |----------------|-------------------------------|
 |Borrar archivo| `rm "nombre_archivo"`|
+|ejemplos| `rm fer.py"`|
 |Borrar carpeta| `rm -r "nombre_carpeta"`|
+|ejemplos| `rm -r valeria/"`|
 
 #### Abrir archivo
 
@@ -84,54 +95,45 @@ Al realizar estas configuraciones ya no tendríamos que configurar los usuarios 
 |----------------|-------------------------------|
 |Ver la ruta actual| `pwd`|
 
-## Iniciando un proyecto
+## **Git init**
 
 |                |Comando                          |
 |----------------|-------------------------------|
 |Inicializar repositorio|`git init`|
 
-## Status
+## **Status**
 
 |                |Comando                          |
 |----------------|-------------------------------|
 |Verificar cambios|`git status`|
 |archivos con cambios|`git status -s`|
-|archivos con cambios y rama actual|`git status -s -b`|
+|con cambios y rama actual|`git status -s -b`|
 
-## Add: Agregar
+## **Add**: Agregar
 
 |                |Comando                          |
 |----------------|-------------------------------|
 |todo|`git add .`|
 |todo lo q se modificó|`git add -A`|
 | cierta extensión|`git add *.png`|
-|Con cierta extensión de **TODO** el proyecto|`git add "*.png"`|
+|Con C_E de **TODO** el proyecto|`git add "*.png"`|
 |todo|`git add --al`|
 |en carpeta con cierta extensión|`git add pdfs/*.pdf`|
+Se recomienda usar la interfaz de VSCode para agregar archivos al **stage**.
 
-## Commit: guardar
-
-|                |Comando                          |
-|----------------|-------------------------------|
-|Guardar con buen mensaje |`git commit -m "Mensaje"`|
-|State y commit en una línea|`git commit -am "Mensaje"`|
-
-Commits específicos, pa hacer **checkouts** sin afectar secciones de código bien hechas.
-
-## Modificar commit
+## **Commit**: guardar
 
 |                |Comando                          |
 |----------------|-------------------------------|
+|Guardar con mensaje |`git commit -m "Mensaje"`|
+|State y commit |`git commit -am "Mensaje"`|
 |Modificar sms de commit (sin/con push)|`git commit --amend -m "Mensaje correcto"`|
-
-## Back last commit 😀🤬👿
-
-|                |Comando                          |
-|----------------|-------------------------------|
 |Volver al ultimo commit|`git checkout -- .`|
 |eliminando todo hasta ese commit|`git reset --hard HEAD😍`|
 
-## Reset
+Commits específicos, pa  **checkouts** sin afectar secciones de código bien hechas.
+
+## **Reset**
 
 |                |Comando                          |
 |----------------|-------------------------------|
@@ -149,20 +151,20 @@ Commits específicos, pa hacer **checkouts** sin afectar secciones de código bi
 |Mostrar historial (commits, **resets**, etc)|`git reflog`|
 |Recuperar cambios😎: **reset (..hard)**, con id d **git reflog**|`git reset --hard "id_commit"`|
 
-## Log: historial de commits
+## **Log**: historial de commits
 
 |                |Comando                          |
 |----------------|-------------------------------|
 |Ver commits|`git log`|
-|Hacer log con hash (id) corto|`git log --oneline`|
-|Hacer log bonito|`git log --oneline --decorate --all --graph`|
+|hash (id) corto|`git log --oneline`|
+|bonito|`git log --oneline --decorate --all --graph`|
 
 ## **DIFF** Revisar cambios
 
 |                |Comando                          |
 |----------------|-------------------------------|
-|Ver cambios en los archivos|`git diff`|
-|Ver cambios incluso estando en el stage|`git diff --staged`|
+|Ver cambios en  archivos|`git diff`|
+|incluso estando en el stage|`git diff --staged`|
 
 ## Checkout
 
@@ -174,8 +176,8 @@ Commits específicos, pa hacer **checkouts** sin afectar secciones de código bi
 
 |                |Comando                          |
 |----------------|-------------------------------|
-|Regresar los cambios al último commit|`git checkout -- .`|
-|Regresar los cambios al último commit de cierto archivo|`git checkout -- "archivo"`|
+|Ir al último commit|`git checkout -- .`|
+|Ir '-', cierto archivo|`git checkout -- "archivo"`|
 
 # Config de archivos desde Git
 
@@ -183,14 +185,14 @@ Commits específicos, pa hacer **checkouts** sin afectar secciones de código bi
 
 |                |Comando                          |
 |----------------|-------------------------------|
-|Renombrar archivos|`git mv nombre-actual-archivo.txt nombre-que-tendra.txt`|
-|Eliminar archivos|`git rm nombre-archivo.txt`|
+|Renombrar archivos|`git mv name.txt name2.txt`|
+|Eliminar archivos|`git rm name.txt`|
 
-Después de realizar estos comandos se deben hacer los commits para guardar los cambios, por que ya estan en el STAGE 😎.
+Después de realizar estos comandos se deben hacer los **commits** para guardar los cambios, por que **ya estan** en el **STAGE** 😎.
 
 ## Desde el editor
 
-Se renombra desde el editor de preferencia, al hacer `git status` Git dirá que eliminamos un archivo y hemos creado otro, para corregir esto y que Git sepa que es una actualización en el nombre debemos hacer lo siguiente:
+Se renombra/eliminar en VSCode, al hacer `git status` Git dirá que eliminamos un archivo y hemos creado otro, para corregir esto y que Git sepa que es una actualización en el nombre debemos hacer lo siguiente:
 
 |                |Comando                          |
 |----------------|-------------------------------|
@@ -198,14 +200,6 @@ Se renombra desde el editor de preferencia, al hacer `git status` Git dirá que 
 |Agregar todo|`git add -A`|
 
 Git reconoce que el archivo fue **renombrado**. Y podremos hacer el commit sin problemas.
-
-Para eliminar simplemente borramos el archivo desde el editor y ejecutar los siguientes comandos:
-
-|                |Comando                          |
-|----------------|-------------------------------|
-|Actualizar todo|`git add -u`|
-
-Ya en este punto habrá detectado que el archivo fue eliminado y podremos hacer commit.
 
 ## Ignorar archivos
 
@@ -218,7 +212,7 @@ node_modules/
 *.png
 ```
 
-## Crear alias
+## **Crear** alias
 
 |                |Comando                          |Ejemplo|
 |----------------|-------------------------------|-------------------------------|
@@ -228,19 +222,27 @@ node_modules/
 |Alias fer py 😎|git branch|`alias gb="git branch"`|
 |Alias fer 😎|venv|`alias venv="source venv/Scripts/activate"`|
 
-## Alias del fer⚽😎
+## **Alias** del fer⚽😎
 
 ```sh
     alias g='git'
     alias ga='git add --all'
     alias gb='git branch'
-    alias gc='git commit'
-    alias gcm='git commit -m'
+    alias gc='git commit  -m'
+    # alias gca='git commit  -m'
     alias gco='git checkout'
     alias gs='git status -sb'
     alias gp='git push'
     alias gpl='git pull'
-    
+    # alias gca='git commit --amend'
+    alias gca='git commit --amend -m'
+
+    alias gcl='git clone'
+    alias gcm='git checkout main'
+    alias gcb='git checkout -b'
+    alias gsh='git show'
+     
+
   
     alias ll='ls -l'
     alias ls='ls -F --color=auto --show-control-chars'
@@ -266,7 +268,7 @@ Una rama es una línea de tiempo de commits, estas nos ayudarán cuando queramos
 |                |Comando                          |
 |----------------|-------------------------------|
 |Crear rama|`git branch nombre-rama`|
-|Crear rama y moverse a ella en un comando 😎|`git checkout -b nombre-rama`|
+|Crear rama/moverse ahi con1 comando 😎|`git checkout -b nombre-rama`|
 |Ver ramas|`git branch`|
 |Ver ramas con commits|`git branch -v`|
 |Cambiar de rama|`git checkout nombre-rama`|
@@ -284,8 +286,8 @@ Una rama es una línea de tiempo de commits, estas nos ayudarán cuando queramos
 |Ver ramas remotas y locales con commits|`git branch -av`|
 |⚽🐱‍👤😎Crear/subir rama remota a github|`git push origin nombre-rama`|
 |⚽🐱‍👤😎Subir rama remota a github|`git push (error cp en la rama)`|
-|Eliminar rama remota|`git push origin :nombre-rama`|
-|Eliminar rama eliminado en github remotamente|`git remote prune origin`|
+|**Eliminar** rama remota|`git push origin :nombre-rama`|
+|**Eliminar** rama eliminado en github remote|`git remote prune origin`|
 
 ## Ramas remotas con pull
 
@@ -296,7 +298,7 @@ Una rama es una línea de tiempo de commits, estas nos ayudarán cuando queramos
 |Crear rama remota😍|`git pull origin nombre-rama`|
 |Traer cambios de repositorio remoto|`git pull`|
 |Con todas las ramas😎|`git pull --all`|
-|Y tags|`git pull --all --tags`|
+|**Y tags 👨‍🎓👿**|`git pull --all --tags`|
 
 ## Ramas remotas con fetch
 
@@ -305,6 +307,8 @@ Una rama es una línea de tiempo de commits, estas nos ayudarán cuando queramos
 |Traer cambios de repositorio remoto|`git fetch`|
 |con todas las ramas|`git fetch --all`|
 |con todas las ramas y tags|`git fetch --all --tags`|
+
+# Merge
 
 ## Merge Fast-Forward
 
@@ -345,15 +349,15 @@ Son una referencia a un commit específico, se usan para guardar releases, usual
 Se pueden descargar de GitHub.
 |                |Comando                          |
 |----------------|-------------------------------|
-|Crear tags|`git tag nombre-o-versión-tag`|
+|Crear tags|`git tag name_v_tag`|
 |Crear tags con versión y mensaje|`git tag -a v1.0.0 -m "mensaje"`|
 |Crear tag en commit anterior|`git tag -a v0.1.0 hash-commit -m "mensaje"`|
 |Ver tags (muestra versión_nombre que le dimos)|`git tag`|
-|Borrar tags|`git tag -d nombre_tag`|
-|Ver + detalle del tag|`git show nombre_tag`|
+|Borrar tags|`git tag -d name_tag`|
+|Ver + detalle del tag|`git show name_tag`|
 |Ver mensaje y demas de tags|`git show v1.0.0`|
 |Subir tags a repositorio remoto|`git push origin --tags`|
-|Subir tags a repositorio remoto|`git push --tags`|
+|👿**Subir** tags a repositorio remoto|`git push --tags`|
 
 ## Git stahs
 
